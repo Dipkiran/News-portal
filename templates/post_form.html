@@ -1,0 +1,12 @@
+<!--DOCTYPE HTML-->
+{% extends "base.html" %}
+
+{% block content %}
+<!-- shows content of parent block -->
+{{ block.super }}
+			<form method='POST' action='' enctype='multipart/form-data'>{% csrf_token %}
+			{{ form.as_p}}
+			<input type='submit', value= 'Create post' />
+			</form>
+</html>
+{% endblock content %}
